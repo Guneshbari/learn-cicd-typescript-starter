@@ -2,7 +2,6 @@ import { describe, test, expect } from "vitest";
 import { getAPIKey } from "../api/auth"; // change path if needed
 
 describe("getAPIKey", () => {
-
   test("returns API key when header is correct", () => {
     const headers = {
       authorization: "ApiKey my-secret-key",
@@ -27,5 +26,4 @@ describe("getAPIKey", () => {
     const result = getAPIKey(headers);
     expect(result).toBeNull();
   });
-
 });
