@@ -42,3 +42,4 @@ jobs:
 
       - name: Check out formatting
         run: npm run format:check
+        run: npm run lint
