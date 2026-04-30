@@ -39,3 +39,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Check out formatting
+        run: npm run format:check
