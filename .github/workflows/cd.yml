@@ -15,7 +15,7 @@ jobs:
 
     permissions:
       contents: read
-      id-token: write # REQUIRED for Workload Identity
+      id-token: write
 
     steps:
       - name: Check out code
@@ -26,16 +26,12 @@ jobs:
         with:
           node-version: 22
 
-      - name: Set npm config
-        run: npm config set optional false
-
       - name: Install dependencies
         run: npm install
 
       - name: App Build
         run: npm run build
 
-      # 🔐 Authenticate to GCP (WIF)
       - name: Authenticate to GCP
         uses: google-github-actions/auth@v2
         with:
