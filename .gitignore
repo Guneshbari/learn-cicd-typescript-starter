@@ -1,5 +1,6 @@
 node_modules/
-coverage/
-dist/
+google-cloud-sdk/
+google-cloud-cli-linux-x86_64.tar.gz
 .env
-.vscode
+dist/
+*.log
