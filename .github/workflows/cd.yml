@@ -26,8 +26,11 @@ jobs:
         with:
           node-version: 22
 
+      - name: Set npm config
+        run: npm config set optional false
+
       - name: Install dependencies
-        run: npm install --omit=optional
+        run: npm install
 
       - name: App Build
         run: npm run build
